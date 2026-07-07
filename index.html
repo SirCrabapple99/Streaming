@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>JsDelivr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="background"></div>
+
+    <div id="container">
+
+        <h1>Game Splitter</h1>
+
+        <div id="uploads">
+            <div class="button" onclick="uploadArchive()">Upload Zip Archive</div>
+            <div class="button" onclick="uploadFolder()">Upload Folder</div>
+        </div>
+        <div id="options">
+            <input type="text" placeholder="Base URL (Optional)" id="baseUrl" class="button"></input>
+
+        </div>
+
+        <div id="downloads">
+            <div id="downloadArchive" class="button" onclick="downloadArchive()">Download Zip Archive</div>
+            <div id="downloadFolder" class="button" onclick="downloadFolder()">Download Folder</div>
+        </div>
+
+    </div>
+
+    <input id="uploadArchive" type="file" accept="application/zip" style="visibility: hidden; width: 0; height: 0;">
+    <input id="uploadFolder" type="file" style="visibility: hidden; width: 0; height: 0;" webkitdirectory multiple>
+    <input id="uploadPresetFile" type="file" accept=".html" style="visibility: hidden; width: 0; height: 0;">
+
+    <script src="https://cdn.jsdelivr.net/npm/fflate@0.8.2/umd/index.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
